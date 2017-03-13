@@ -40,6 +40,7 @@ export default class About extends Component {
             Techs: React, React-router, React-d3, d3, React-mui, Webpack.
             No redux used neither storing application state.
             Unit tests are not implemented yet.
+            PS: SVG ELEMENTS ARE NOT RESPONSIVE DUO TO React-d3 package.
             Developed by: Rodolfo Ladeira`}
           </Panel>
         </div>

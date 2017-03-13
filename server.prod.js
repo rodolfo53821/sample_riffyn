@@ -7,7 +7,15 @@ app.use(express.static(__dirname + '/public'));
 
 // views is directory for all template files
 app.get('/', function(request, response) {
-  response.sendFile(__dirname + '/index.html');
+  response.sendFile(__dirname + '/public/index.html');
+});
+
+app.get('/about', function(request, response) {
+  response.sendFile(__dirname + '/public/index.html');
+});
+
+app.get('/distribution', function(request, response) {
+  response.sendFile(__dirname + '/public/index.html');
 });
 
 app.listen(app.get('port'), function() {

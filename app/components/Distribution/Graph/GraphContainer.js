@@ -4,7 +4,7 @@ import Animation from './animation';
 
   let chartData = require('dsv!../../../../data/data.csv');
 
-  let width = 1700,
+  let width = 1500,
     height = 300,
     margins = {left: 100, right: 100, top: 50, bottom: 50},
     // chart series,
