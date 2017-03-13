@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --hot --inline",
-    "heroku-postbuild": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --hot --inline"
+    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --hot --inline"
   },
   "keywords": ["react","muicss","d3"],
   "author": {
