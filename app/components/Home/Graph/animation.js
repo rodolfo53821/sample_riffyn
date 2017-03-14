@@ -30,7 +30,6 @@ const runWillMount = (node, transition, props, newProps, callback) => {
     });
 };
 
-
 const runWillReceiveProps = (node, transition, props, newProps, callback) => {
   d3.select(node).transition(transition)
     .attr('x', newProps.x)
@@ -47,7 +46,7 @@ const ANIMATION_ACTIONS = {
   'willReceiveProps': runWillReceiveProps
 };
 
-class Animation {
+export default class Animation {
   constructor(props) {
     const timeFrame = 40;
     const time =  props.ind*timeFrame + Math.floor(Math.random()*timeFrame);
@@ -65,4 +64,3 @@ class Animation {
   }
 };
 
-export default Animation;

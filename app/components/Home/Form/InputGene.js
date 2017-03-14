@@ -15,7 +15,6 @@ export default class InputGene extends Component {
   
   constructor(props) {
     super(props);
-
     
     this.onChangeInput = this.onChangeInput.bind(this);
     this.state = {
@@ -52,11 +51,11 @@ export default class InputGene extends Component {
       </div>
     );
   }
-}
+};
 
 InputGene.propTypes = {
   ele: React.PropTypes.string.isRequired,
   label: React.PropTypes.string.isRequired,
   onChangeChain: React.PropTypes.func.isRequired,
   value: React.PropTypes.string
-}
+};

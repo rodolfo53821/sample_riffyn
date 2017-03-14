@@ -21660,7 +21660,8 @@
 	          { id: 'header-img', style: styles.innerStyle },
 	          _react2.default.createElement('img', {
 	            style: styles.imageStyle,
-	            src: 'http://static1.squarespace.com/static/53f6dface4b050d619ba3249/t/55e7c173e4b06519fea5b6e5/1488865266995/'
+	            src: 'http://static1.squarespace.com/static/53f6dface4b050d619ba3249/t/55e7c173e4b06519fea5b6e5/1488865266995/',
+	            alt: 'Riffyn Logo'
 	          }),
 	          _react2.default.createElement(
 	            'h1',
@@ -21677,6 +21678,7 @@
 	}(_react.Component);
 
 	exports.default = Header;
+	;
 
 /***/ },
 /* 180 */
@@ -21733,7 +21735,6 @@
 	  _createClass(TabsMenu, [{
 	    key: 'onChange',
 	    value: function onChange(i, value, tab, ev) {
-
 	      window.location = value;
 	    }
 	  }, {
@@ -27933,7 +27934,6 @@
 	    };
 
 	    _this.onChangeChain = _this.onChangeChain.bind(_this);
-
 	    return _this;
 	  }
 
@@ -38352,13 +38352,17 @@
 	var styles = {
 	  wrapper: {
 	    paddingBottom: '4rem'
+	  },
+	  title: {
+	    paddingBottom: '0.5rem',
+	    color: 'rgba(0, 0, 0, 0.54)'
 	  }
 	};
 
 	var getSVG = function getSVG(chainStr) {
 	  return _react2.default.createElement(
 	    _reactD3Core.Svg,
-	    { width: '100%', height: 60, margins: { top: 0, right: 0, bottom: 0, left: 0 } },
+	    { width: '100%', height: 60, viewBox: '0 0 1000 60', margins: { top: 0, right: 0, bottom: 0, left: 0 } },
 	    Array.from(chainStr).map(function (el, ind) {
 	      var x = ind * 10 + 5;
 	      return _react2.default.createElement(_GeneRepresentation2.default, { key: ind, ind: ind, base: el, x: x, y: 10 });
@@ -38388,7 +38392,7 @@
 	        { style: styles.wrapper },
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'mui--text-caption' },
+	          { className: 'mui--text-caption', style: styles.title },
 	          label
 	        ),
 	        _react2.default.createElement(
@@ -38451,7 +38455,7 @@
 	  '-': 'rgba(0, 0, 0, 0.3)'
 	};
 
-	var heightMap = {
+	var HEIGHT_MAP = {
 	  a: '55',
 	  c: '50',
 	  g: '45',
@@ -38482,7 +38486,6 @@
 	  }, {
 	    key: 'componentWillReceiveProps',
 	    value: function componentWillReceiveProps(nextProps) {
-
 	      if (this.props.base != nextProps.base) {
 	        var node = _reactDom2.default.findDOMNode(this);
 	        this.state.animation.run('willReceiveProps', node, nextProps);
@@ -38513,7 +38516,7 @@
 
 	      var x = animationEnabled ? 0 : this.props.x;
 
-	      var height = heightMap[base];
+	      var height = HEIGHT_MAP[base];
 
 	      return {
 	        style: style,
@@ -38538,7 +38541,7 @@
 	}(_react.Component);
 
 	exports.default = GeneRepresentation;
-
+	;
 
 	GeneRepresentation.propTypes = {
 	  base: _react2.default.PropTypes.oneOf(['a', 'c', 'g', 't', '-']).isRequired,
@@ -38633,9 +38636,8 @@
 	  return Animation;
 	}();
 
-	;
-
 	exports.default = Animation;
+	;
 
 /***/ },
 /* 289 */
@@ -55345,7 +55347,7 @@
 	}(_react.Component);
 
 	exports.default = FormCompareGenes;
-
+	;
 
 	FormCompareGenes.propTypes = {
 	  chain1Str: _react2.default.PropTypes.string,
@@ -55445,7 +55447,7 @@
 	}(_react.Component);
 
 	exports.default = InputGene;
-
+	;
 
 	InputGene.propTypes = {
 	  ele: _react2.default.PropTypes.string.isRequired,
@@ -56125,12 +56127,7 @@
 	var width = 1500,
 	    height = 300,
 	    margins = { left: 100, right: 100, top: 50, bottom: 50 },
-
-	// chart series,
-	// field: is what field your data want to be selected
-	// name: the name of the field that display in legend
-	// color: what color is the line
-	chartSeries = [{
+	    chartSeries = [{
 	  field: 'mut1',
 	  name: 'Mut1',
 	  symbol: 'diamond',
@@ -56161,7 +56158,6 @@
 
 	    var _this = _possibleConstructorReturn(this, (GraphContainer.__proto__ || Object.getPrototypeOf(GraphContainer)).call(this, props));
 
-	    var time = 100;
 	    _this.state = {
 	      animation: new _animation2.default(props)
 	    };
@@ -71020,14 +71016,6 @@
 	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	var COLOR_MAP = {
-	  a: '#5050ff',
-	  c: '#e00000',
-	  g: '#00c000',
-	  t: '#e6e600',
-	  '-': 'rgba(0, 0, 0, 0.3)'
-	};
 
 	var runDidMount = function runDidMount(node, transition, props, newProps, callback) {
 	  var _node = d3.selectAll('svg path');

@@ -48,7 +48,7 @@ export default class GraphContainer extends Component {
 
     this.state = {
       genesMatch
-    }
+    };
 
   }
 

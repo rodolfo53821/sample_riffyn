@@ -2,15 +2,11 @@ import React, { Component } from 'react';
 import {ScatterPlot} from 'react-d3-basic';
 import Animation from './animation';
 
-  let chartData = require('dsv!../../../../data/data.csv');
+  const chartData = require('dsv!../../../../data/dataDistribution.csv');
 
-  let width = 1500,
+  const width = 1500,
     height = 300,
     margins = {left: 100, right: 100, top: 50, bottom: 50},
-    // chart series,
-    // field: is what field your data want to be selected
-    // name: the name of the field that display in legend
-    // color: what color is the line
     chartSeries = [
       {
         field: 'mut1',
@@ -43,7 +39,6 @@ export default class GraphContainer extends Component {
   constructor(props) {
     super(props);
 
-    const time = 100;
     this.state = {
       animation: new Animation(props)
     };

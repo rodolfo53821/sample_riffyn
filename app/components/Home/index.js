@@ -21,7 +21,6 @@ export default class Home extends Component {
     }
 
     this.onChangeChain = this.onChangeChain.bind(this);
-
   }
 
   onChangeChain(chain, value) {

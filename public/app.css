@@ -1,0 +1,11 @@
+#distribution-inner .mui-panel > div > .legend {
+	width: 100% !important;
+}
+
+#distribution-inner svg {
+	width: 100% !important;
+}
+
+#compare_genes-inner svg {
+	width: 100% !important;
+}

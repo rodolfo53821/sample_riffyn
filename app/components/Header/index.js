@@ -35,6 +35,7 @@ export default class Header extends Component {
           <img 
             style={styles.imageStyle} 
             src="http://static1.squarespace.com/static/53f6dface4b050d619ba3249/t/55e7c173e4b06519fea5b6e5/1488865266995/"
+            alt="Riffyn Logo"
           />
           <h1 style={styles.title}>Sample App</h1>
         </div>
@@ -42,4 +43,4 @@ export default class Header extends Component {
       </div>
     );
   }
-}
+};

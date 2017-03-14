@@ -1,5 +1,6 @@
 var express = require('express');
 var app = express();
+/*Production pipeline not setup. This is not the best approach*/
 
 app.set('port', (process.env.PORT || 5000));
 

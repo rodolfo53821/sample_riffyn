@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import Main from '../components/Main';
-import Home from '../components/Home/';
+import Home from '../components/Home';
 import About from '../components/About';
 import Distribution from '../components/Distribution';
 

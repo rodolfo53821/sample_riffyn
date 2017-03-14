@@ -18,7 +18,6 @@ export default class TabsMenu extends React.Component {
   }
 
   onChange(i, value, tab, ev) {
-    
     window.location = value;
   }
 

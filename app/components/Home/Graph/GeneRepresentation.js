@@ -10,7 +10,7 @@ const COLOR_MAP = {
   '-': 'rgba(0, 0, 0, 0.3)'
 };
 
-const heightMap = {
+const HEIGHT_MAP = {
   a: '55',
   c: '50',
   g: '45',
@@ -33,12 +33,10 @@ export default class GeneRepresentation extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    
     if (this.props.base != nextProps.base) {
         let node = ReactDOM.findDOMNode(this);
         this.state.animation.run('willReceiveProps', node, nextProps);
     }
- 
   }
 
   componentWillUnmount() {
@@ -58,7 +56,7 @@ export default class GeneRepresentation extends Component {
 
     let x = animationEnabled ? 0 : this.props.x;
 
-    const height = heightMap[base];
+    const height = HEIGHT_MAP[base];
 
     return {
       style, 
@@ -76,11 +74,11 @@ export default class GeneRepresentation extends Component {
     const props = this.getProps();
     
     return (
-      <rect  {...props} >
-      </rect>
+      <rect  {...props} />
     );
+
   }
-}
+};
 
 GeneRepresentation.propTypes = {
   base: React.PropTypes.oneOf(['a', 'c', 'g', 't', '-']).isRequired,

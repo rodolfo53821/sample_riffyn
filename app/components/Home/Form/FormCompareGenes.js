@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import InputGene from './InputGene';
 import Form from 'muicss/lib/react/form';
 
-
 const styles = {
   tittle: {
     borderBottomColor: 'lightgrey',
@@ -32,7 +31,7 @@ export default class FormCompareGenes extends Component {
       </div>
     );
   }
-}
+};
 
 FormCompareGenes.propTypes = {
   chain1Str: React.PropTypes.string,
